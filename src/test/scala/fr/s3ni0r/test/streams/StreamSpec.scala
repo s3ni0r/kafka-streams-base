@@ -1,18 +1,18 @@
-package uk.pricesquid.scala
+package fr.s3ni0r.test.streams
 
 import java.util.Properties
 import java.util.concurrent.TimeUnit
 
-import org.apache.kafka.clients.consumer.{ConsumerConfig, ConsumerRecord}
+import fr.s3ni0r.test.utils.{KafkaLocalServer, MessageListener, MessageSender, RecordProcessorTrait}
+import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.serialization._
 import org.apache.kafka.streams.kstream._
 import org.apache.kafka.streams.processor.WallclockTimestampExtractor
-import org.apache.kafka.streams.{Consumed, KafkaStreams, StreamsBuilder, StreamsConfig}
+import org.apache.kafka.streams.{KafkaStreams, StreamsBuilder, StreamsConfig}
 import org.scalatest.{BeforeAndAfterAll, FreeSpec, Matchers}
-import uk.procesquid.utils.{KafkaLocalServer, MessageListener, MessageSender, RecordProcessorTrait}
 
-import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 
 class StreamSpec extends FreeSpec with Matchers with BeforeAndAfterAll {
   var kafkaServer = null.asInstanceOf[KafkaLocalServer]
@@ -93,7 +93,7 @@ class StreamSpec extends FreeSpec with Matchers with BeforeAndAfterAll {
       )
 
 
-//      listener.readKeyValues(1000).map(println)
+      //      listener.readKeyValues(1000).map(println)
       val t = listener.waitUntilMinKeyValueRecordsReceived(1000, 50000)
 
       streams.close()
@@ -101,7 +101,7 @@ class StreamSpec extends FreeSpec with Matchers with BeforeAndAfterAll {
 
     class RecordProcessor extends RecordProcessorTrait[String, Long] {
       override def processRecord(record: ConsumerRecord[String, Long]): Unit = {
-         println(s"Get Message $record")
+        println(s"Get Message $record")
       }
     }
   }
