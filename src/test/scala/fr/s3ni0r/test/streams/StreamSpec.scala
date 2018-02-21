@@ -67,16 +67,14 @@ class StreamSpec extends FreeSpec with Matchers with BeforeAndAfterAll {
       val sender = MessageSender[String, String](broker, classOf[StringSerializer].getName, classOf[StringSerializer].getName)
 
       Future {
-        1 to 1000 map {
-          e ⇒
+        1 to 50 map { e ⇒
             Thread.sleep(50)
             sender.writeKeyValue(inputTopic1, e.toString, s"element 1")
         }
       }
 
       Future {
-        1 to 1000 map {
-          e ⇒
+        1 to 50 map { e ⇒
             Thread.sleep(50)
             sender.writeKeyValue(inputTopic2, e.toString, s"element 2")
         }
@@ -94,7 +92,9 @@ class StreamSpec extends FreeSpec with Matchers with BeforeAndAfterAll {
 
 
       //      listener.readKeyValues(1000).map(println)
-      val t = listener.waitUntilMinKeyValueRecordsReceived(1000, 50000)
+      val t = listener.waitUntilMinKeyValueRecordsReceived(50, 100000)
+
+      assert(t.length === 50)
 
       streams.close()
     }
