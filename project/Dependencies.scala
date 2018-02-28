@@ -22,4 +22,5 @@ object Dependencies {
   val algebird = "com.twitter" %% "algebird-core" % AlgebirdVersion
   val chill = "com.twitter" %% "chill" % ChillVersion
   val scalaTest = "org.scalatest" %% "scalatest" % ScalaTestVersion
+  val mockedStreams = "com.madewithtea" %% "mockedstreams" % mockedStreamsVersion
 }

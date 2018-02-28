@@ -3,6 +3,7 @@ object Versions {
   val ChillVersion = "0.9.2"
   val LogbackVersion = "1.2.3"
   val KafkaVersion = "1.0.0"
+  val mockedStreamsVersion = "1.5.0"
   val ScalaLoggingVersion = "3.5.0"
   val CuratorVersion = "4.0.0"
   val MinitestVersion = "2.0.0"

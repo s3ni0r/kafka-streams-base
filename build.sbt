@@ -20,7 +20,8 @@ libraryDependencies ++= Seq(
   curator       % "test",
   scalaTest     % "test",
   algebird      % "test",
-  chill         % "test"
+  chill         % "test",
+  mockedStreams % "test"
 )
 
 testFrameworks += new TestFramework("minitest.runner.Framework")
