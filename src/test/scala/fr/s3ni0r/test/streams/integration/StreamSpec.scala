@@ -1,4 +1,4 @@
-package fr.s3ni0r.test.streams
+package fr.s3ni0r.test.streams.integration
 
 import java.util.Properties
 import java.util.concurrent.TimeUnit
