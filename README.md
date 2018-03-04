@@ -2,6 +2,11 @@
 Base project for kafka-streams development and testing
 
 - [Kafka cluster setup](https://github.com/s3ni0r/kafka-streams-base#setup-a-kafka-cluster-using-docker-machine-and-docker-swarm)
+    - [Requirements](https://github.com/s3ni0r/kafka-streams-base#requirements)
+    - [Hardware (Used to for this setup)](https://github.com/s3ni0r/kafka-streams-base#hardware-used-to-for-this-setup)
+    - [Setup docker-machine nodes](https://github.com/s3ni0r/kafka-streams-base#setup-docker-machine-nodes)
+    - [Deploy docker stack into the swarm cluster](https://github.com/s3ni0r/kafka-streams-base#deploy-docker-stack-into-the-swarm-cluster)
+    - [Fiddle with Kafka performance test](https://github.com/s3ni0r/kafka-streams-base#fiddle-with-kafka-performance-test)
 
 ## Setup a kafka cluster using docker-machine and docker-swarm
 
