@@ -1,6 +1,3 @@
-# kafka-streams-base
-Base project for kafka-streams development and testing
-
 # Setup a kafka cluster using docker-machine and docker-swarm
 
 ## Requirements
@@ -118,7 +115,7 @@ Docker version 17.12.1-ce, build 7390fc6
 docker@node-1:~$ 
 ```
 
-2. copy and paste the infra/kafka-cluster-swarm.yml content and run the command below
+2. copy and paste the kafka-cluster-swarm.yml content and run the command below
 ```bash
 docker@node-1:~$ docker stack deploy --compose-file kafka-cluster-swarm.yml kafka-cluster
 ```
@@ -151,3 +148,5 @@ kafka_2.12-1.0.0 ❯ bin/kafka-producer-perf-test.sh --topic benchmark-2-2-none 
 2179966 records sent, 435993.2 records/sec (41.58 MB/sec), 1372.1 ms avg latency, 2256.0 max latency.
 15000000 records sent, 407110.869860 records/sec (38.83 MB/sec), 1407.67 ms avg latency, 2538.00 ms max latency, 2010 ms 50th, 2385 ms 95th, 2487 ms 99th, 2536 ms 99.9th.
 ```
+
+
