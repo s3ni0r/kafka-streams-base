@@ -132,6 +132,8 @@ docker@node-1:~$ docker stack deploy --compose-file kafka-cluster-swarm.yml kafk
 
 3. navigate to container visualizer at http://192.168.99.100:8080 to check stack services status :)
 
+![alt text](https://image.ibb.co/jtb4Nn/Screen_Shot_2018_03_05_at_00_11_54.png "Docker container visualiser")
+
 ### Fiddle with Kafka performance test 
 
 `NB: You need to modify the stack Yaml file to suit configuration for your test here i show how to run them only`

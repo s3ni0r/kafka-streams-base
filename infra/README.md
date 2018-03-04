@@ -31,7 +31,7 @@ docker-machine version 0.13.0, build 9ba6da9
 5.1.22_Ubuntur115126
 ```
 
-## Hardware (Used to for this setup)
+## Hardware (Used in this setup)
 
 - Intel(R) Core(TM) i7-4700HQ CPU @ 2.40GHz (8 cores)
 - 1Gbit/s Killer E220x Gigabit Ethernet Controller
