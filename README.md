@@ -1,9 +1,11 @@
 # kafka-streams-base
 Base project for kafka-streams development and testing
 
-# Setup a kafka cluster using docker-machine and docker-swarm
+- [Kafka cluster setup](https://github.com/s3ni0r/kafka-streams-base#setup-a-kafka-cluster-using-docker-machine-and-docker-swarm)
 
-## Requirements
+## Setup a kafka cluster using docker-machine and docker-swarm
+
+### Requirements
 - Linux
 ```bash
 ~ ❯ cat /etc/*-release
@@ -34,14 +36,14 @@ docker-machine version 0.13.0, build 9ba6da9
 5.1.22_Ubuntur115126
 ```
 
-## Hardware (Used to for this setup)
+### Hardware (Used to for this setup)
 
 - Intel(R) Core(TM) i7-4700HQ CPU @ 2.40GHz (8 cores)
 - 1Gbit/s Killer E220x Gigabit Ethernet Controller
 - 16GiB of Memory
 - 1TB ATA Disk
 
-## Setup docker-machine nodes
+### Setup docker-machine nodes
 
 1. Create three docker-machine instances (node-1, node-2, node-3) with 4GB of memory and 2 CPU cores each:
 
@@ -95,7 +97,7 @@ wmu77zmdhq60ge579jxs6x7as     node-2              Ready               Active
 ukeq86oqsz0ove0lleic9xk0a     node-3              Ready               Active        
 ```
 
-## Deploy docker stack into the swarm cluster
+### Deploy docker stack into the swarm cluster
 
 1. connect to the swarm manager node
 ```bash
@@ -125,7 +127,7 @@ docker@node-1:~$ docker stack deploy --compose-file kafka-cluster-swarm.yml kafk
 
 3. navigate to container visualizer at http://192.168.99.100:8080 to check stack services status :)
 
-## Fiddle with Kafka performance test 
+### Fiddle with Kafka performance test 
 
 `NB: You need to modify the stack Yaml file to suit configuration for your test here i show how to run them only`
 
