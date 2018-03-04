@@ -125,7 +125,7 @@ Docker version 17.12.1-ce, build 7390fc6
 docker@node-1:~$ 
 ```
 
-2. copy and paste the infra/kafka-cluster-swarm.yml content and run the command below
+2. copy and paste the [infra/kafka-cluster-swarm.yml](https://github.com/s3ni0r/kafka-streams-base/blob/master/infra/kafka-cluster-swarm.yml) content and run the command below
 ```bash
 docker@node-1:~$ docker stack deploy --compose-file kafka-cluster-swarm.yml kafka-cluster
 ```
